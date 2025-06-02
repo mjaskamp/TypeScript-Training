@@ -18,24 +18,19 @@ export class Account {
     withdraw(sumWithdraw: number): void {
         if (sumWithdraw <= 0) {
             throw new Error(`Please supply a positive, non-zero ammount`);
-        } else {
-        this._balance = this._balance - sumWithdraw
+        } 
+
+        if (this._type == "savings" && sumWithdraw > this._balance) {
+            throw new Error('You have no money')
         }
 
-        if (this._type == "savings" && this._balance == 0) {
-            throw new Error('You have no money')
-        } else {
-        this._balance = this._balance - sumWithdraw
-        }
+        this._balance = this._balance - sumWithdraw 
     }
 
     deposit(sumDeposit: number): void {
         if (sumDeposit <= 0) {
             throw new Error(`Please supply a positive, non-zero ammount`);
-        } else {
+        } 
         this._balance = this._balance + sumDeposit
-        }
-    }
-
-    
+            }
 }
