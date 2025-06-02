@@ -1,0 +1,14 @@
+{
+  "name": "typescripttraining",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "vitest"
+  },
+  "author": "Mark",
+  "license": "ISC",
+  "description": "Workshop",
+  "dependencies": {
+    "tsx": "^4.19.4"
+  }
+}
