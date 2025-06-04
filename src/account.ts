@@ -17,7 +17,7 @@ export class Account {
 
     withdraw(sumWithdraw: number): void {
         if (sumWithdraw <= 0) {
-            throw new Error(`Please supply a positive, non-zero ammount`);
+            throw new Error(`Please supply a positive, non-zero amount`);
         } 
 
         if (this._type == "savings" && sumWithdraw > this._balance) {
@@ -29,7 +29,7 @@ export class Account {
 
     deposit(sumDeposit: number): void {
         if (sumDeposit <= 0) {
-            throw new Error(`Please supply a positive, non-zero ammount`);
+            throw new Error(`Please supply a positive, non-zero amount`);
         } 
         this._balance = this._balance + sumDeposit
             }
