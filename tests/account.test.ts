@@ -25,7 +25,7 @@ test('create new account and deposit a negative amount', () => {
 
     let account :Account = new Account('checking');
 
-    expect(() => account.deposit(-1)).toThrowError('Please supply a positive, non-zero amount fail');
+    expect(() => account.deposit(-1)).toThrowError('Please supply a positive, non-zero amount');
 
 })
 
